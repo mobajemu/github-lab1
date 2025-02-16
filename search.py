@@ -2,7 +2,7 @@ import json
 
 def search_json(json_data, search_string):
     results = []
-    # Place your search code here
-    # you will have to loop through the json_data file you created earlier
-    # finally you can store the match in the result list and return it
+    for item in json_data:  # iterate over each item in the JSON data
+        if search_string in item.values(): # check if the search string is present in the values of the item
+            results.append(item) # if found, add the item to the results list
     return results
